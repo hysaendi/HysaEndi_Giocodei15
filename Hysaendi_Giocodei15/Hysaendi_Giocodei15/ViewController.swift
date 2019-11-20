@@ -9,10 +9,94 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    
+    var mat = [[1, 2, 3, 4],
+               [5, 6, 7, 8],
+               [9, 10, 12, 12],
+               [13, 14, 15, 0]]
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    }
+    
+    func ordinaMatriceBottoni ()
+    {
+        mat = [[1, 2, 3, 4],
+               [5, 6, 7, 8],
+               [9, 10, 12, 12],
+               [13, 14, 15, 0]]
+        
+    }
+    
+    
+    func scombinaMatrice (mosse : Int)
+    {
+        var r = 0
+        var posZero = trovaLoZero()
+        var x = posZero.0
+        var y = posZero.1
+        for i in 0...mosse
+        {
+            r = Int.random(in: 0...3)
+            if (r == 0)
+            {
+                if( y > 0)
+                {
+                    mat [x][y] = mat [x][y-1]
+                    y -= 1
+                    mat [x][y] = 0
+                    
+                }
+            }
+            else if (r == 1)
+            {
+                if (x < 3)
+                {
+                   mat [x][y] = mat [x+1][y]
+                   x += 1
+                   mat [x][y] = 0
+                }
+            }
+            else if (r == 2)
+            {
+                if ( y < 3)
+                {
+                    mat [x][y] = mat [x][y+1]
+                    y += 1
+                    mat [x][y] = 0
+                }
+            }
+            else if (r == 3)
+            {
+                if ( x > 0)
+                {
+                    mat [x][y] = mat [x-1][y]
+                    x -= 1
+                    mat[x][y] = 0
+                }
+            }
+        }
+        
+        
+    }
+    
+    func trovaLoZero () -> (Int,Int)
+    {
+        for i in 0...3
+        {
+            for p in 0...3
+            {
+                if mat[i][p] == 0
+                {
+                    return (i, p)
+                }
+            }
+        }
+        return (-1, -1)
     }
 
 
