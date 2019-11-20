@@ -44,7 +44,7 @@ class ViewController: UIViewController {
             r = Int.random(in: 0...3)
             if (r == 0)
             {
-                if( y > 0)
+                if( y > 0)      //sposta in su
                 {
                     mat [x][y] = mat [x][y-1]
                     y -= 1
@@ -54,14 +54,14 @@ class ViewController: UIViewController {
             }
             else if (r == 1)
             {
-                if (x < 3)
+                if (x < 3)                      //sposta a destra
                 {
                    mat [x][y] = mat [x+1][y]
                    x += 1
                    mat [x][y] = 0
                 }
             }
-            else if (r == 2)
+            else if (r == 2)                //sposta giù
             {
                 if ( y < 3)
                 {
@@ -70,7 +70,7 @@ class ViewController: UIViewController {
                     mat [x][y] = 0
                 }
             }
-            else if (r == 3)
+            else if (r == 3)            //sposta a sinistra
             {
                 if ( x > 0)
                 {
@@ -96,7 +96,7 @@ class ViewController: UIViewController {
                 }
             }
         }
-        return (-1, -1)
+        return (-1, -1)     //caso impossibile nel quale non c'e lo zero
     }
 
 
