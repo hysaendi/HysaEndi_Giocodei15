@@ -10,12 +10,19 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet var ArrButtons: [UIButton]!
     
     var mat = [[1, 2, 3, 4],
                [5, 6, 7, 8],
                [9, 10, 12, 12],
                [13, 14, 15, 0]]
     
+    @IBAction func btnMescola(_ sender: Any) {
+        
+        trovaLoZero()
+        scombinaMatrice(mosse: 1)
+        switchBottoni()
+    }
     
 
     override func viewDidLoad() {
@@ -31,7 +38,7 @@ class ViewController: UIViewController {
         var posZero = trovaLoZero()
         var x = posZero.0
         var y = posZero.1
-        for i in 0...mosse
+        for _ in 0...mosse
         {
             r = Int.random(in: 0...3)
             if (r == 0)
@@ -90,7 +97,30 @@ class ViewController: UIViewController {
         }
         return (-1, -1)     //caso impossibile nel quale non c'e lo zero
     }
+    
+    
+    func switchBottoni ()
+    {
+        var x = 0
+        var y = 0
+        for _ in 0...15
+        {
+            if (x==3)
+            {
+            ArrButtons[y*4+x].setTitle(String(mat[y][x]),for:.normal)
+                x = 0
+                y = y + 1
+        }
+            else
+            {
+            ArrButtons[y*4+x].setTitle(String(mat[y][x]),for:.normal)
+                x = x + 1
+            }
+        
+    }
 
 
+    }
 }
+
 

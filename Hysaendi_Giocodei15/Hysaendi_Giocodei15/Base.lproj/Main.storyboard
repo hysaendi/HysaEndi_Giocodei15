@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -90,24 +90,45 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="0"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M1q-aF-prw">
-                                <rect key="frame" x="148" y="546" width="119" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Mescola i Tasselli"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rkZ-UE-dz4">
                                 <rect key="frame" x="242" y="483" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="15"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8mw-Sw-3nL">
+                                <rect key="frame" x="145" y="554" width="121" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Mescola"/>
+                                <connections>
+                                    <action selector="btnMescola:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tmD-kF-Ohx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outletCollection property="ArrButtons" destination="JIV-qY-pnl" collectionClass="NSMutableArray" id="g6u-ri-wx7"/>
+                        <outletCollection property="ArrButtons" destination="B0t-7f-1gQ" collectionClass="NSMutableArray" id="CK7-ne-RGs"/>
+                        <outletCollection property="ArrButtons" destination="IV2-W5-yBt" collectionClass="NSMutableArray" id="dwe-7o-gAN"/>
+                        <outletCollection property="ArrButtons" destination="6mR-i4-Drl" collectionClass="NSMutableArray" id="QIn-8l-LYI"/>
+                        <outletCollection property="ArrButtons" destination="6Zy-Rx-u9V" collectionClass="NSMutableArray" id="2q0-Ur-bL1"/>
+                        <outletCollection property="ArrButtons" destination="AtB-cG-wX2" collectionClass="NSMutableArray" id="SFO-CG-Fr6"/>
+                        <outletCollection property="ArrButtons" destination="CIi-6F-5OB" collectionClass="NSMutableArray" id="tgQ-za-I4g"/>
+                        <outletCollection property="ArrButtons" destination="RTm-BY-sXw" collectionClass="NSMutableArray" id="RlU-jK-Od0"/>
+                        <outletCollection property="ArrButtons" destination="a3t-yU-uCB" collectionClass="NSMutableArray" id="MVH-zy-FAA"/>
+                        <outletCollection property="ArrButtons" destination="hoM-Fb-CVK" collectionClass="NSMutableArray" id="4Y8-mL-qHy"/>
+                        <outletCollection property="ArrButtons" destination="gvi-pR-mI5" collectionClass="NSMutableArray" id="jK1-oa-V3M"/>
+                        <outletCollection property="ArrButtons" destination="LdL-eP-fh3" collectionClass="NSMutableArray" id="XDB-U6-jN2"/>
+                        <outletCollection property="ArrButtons" destination="hxh-U8-Ngj" collectionClass="NSMutableArray" id="qXQ-Yj-og2"/>
+                        <outletCollection property="ArrButtons" destination="S7n-xB-XOq" collectionClass="NSMutableArray" id="zQv-zX-cyJ"/>
+                        <outletCollection property="ArrButtons" destination="rkZ-UE-dz4" collectionClass="NSMutableArray" id="5hA-OB-0HI"/>
+                        <outletCollection property="ArrButtons" destination="Lba-kV-eD0" collectionClass="NSMutableArray" id="MBQ-CO-l71"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="133" y="139"/>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
         </scene>
     </scenes>
 </document>
