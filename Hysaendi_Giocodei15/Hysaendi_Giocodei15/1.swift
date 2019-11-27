@@ -21,18 +21,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-    }
-    
-    func ordinaMatriceBottoni ()
-    {
-        mat = [[1, 2, 3, 4],
-               [5, 6, 7, 8],
-               [9, 10, 12, 12],
-               [13, 14, 15, 0]]
         
     }
     
-    
+   
     func scombinaMatrice (mosse : Int)
     {
         var r = 0
